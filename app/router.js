@@ -1,3 +1,11 @@
+/*
+ * @Author: RuiZZZ 2372456234@qq.com
+ * @Date: 2026-07-06 18:36:41
+ * @LastEditors: RuiZZZ 2372456234@qq.com
+ * @LastEditTime: 2026-07-07 11:36:35
+ * @FilePath: \aams-server\app\router.js
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 'use strict';
 
 module.exports = app => {
@@ -40,6 +48,8 @@ module.exports = app => {
   router.get('/api/aams/dashboard/rooms', controller.dashboard.roomOverview);
   router.get('/api/aams/dashboard/logs', controller.dashboard.recentLogs);
   router.get('/api/aams/operation-logs', controller.operationLog.list);
+
+  router.get('/api/aams/teams', controller.room.getTeams);
   
   // 删除了无用的 scheduler 和 strategy 路由
 };
